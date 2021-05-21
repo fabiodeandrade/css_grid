@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #101010;
+
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/* Menu */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background-color: #101010;
+    padding: 10px;
+    box-shadow: 0px 5px 20px #000;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu li a {
+    display: block;
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #ccc;
+    margin-left: 50px;
+}
+
+
+
+/*Efeitos*/
+
+.menu li a:hover {
+    transition: background 0.5s;
+    background-color: rgb(63, 63, 65);
+    
+}
+
+.rodape li a:hover {
+    transition: background 1s;
+    background-color: rgb(63, 63, 65);
+    
+    
+}
+
+/* Meio */
+
+h1 {
+    color:white;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+.rodape li a {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+
+.container {
+    display: grid;
+    max-width: 960px;
+    margin: 0 auto;
+
+    grid-template-areas: 
+    "sidenav item item"
+    "sidenav item item"
+    "sidenav item item"
+    "footer footer footer"
+    ;
+    
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+.sidenav {
+    max-width: 250px;
+    min-width: 200px;
+    height: 1000px;
+    background-color: #333;
+    border-radius: 20px;
+    grid-area: "sidenav";
+    grid-row: sidenav;
+    
+}
+
+.sidenav p {
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-style: italic;
+    
+}
+.item {
+    max-width: 250px;
+    min-width: 200px;
+    height: 320px;
+    background-color: #333;
+    border-radius: 20px;
+    grid-area: "item";
+    
+
+}
+
+.footer {
+    width: auto;
+    height: 200px;
+
+    background-color: #333;
+    border-radius: 20px;
+    grid-area: "footer";
+    grid-column: footer;
+}
+.footer p {
+    color: white;
+    padding: 20px;
+    font-size: 12px;
+    font-style: italic;
+    
+}
+
+.item p {
+    color: white;
+    text-align: justify;
+    padding: 20px;
+    align-content: center;
+    max-width: 250px;
+    height: 300px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+    
+}
+
+footer {
+    color: white;
+    text-align: center;
+    margin: 3px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Mobile*/
+
+@media (max-width: 250px) {
+    .container {
+        
+        grid-template-areas:
+        "sidenav item"        
+        "sidenav item"        
+        "sidenav item"
+        "sidenav item"
+        "sidenav item"
+        "footer footer";
+        
+             
+       
+    }
+
+}
+
+@media (max-width: 520px) {
+    .sidenav {
+        height: 300px;
+
+    }
+    .sidenav p {
+        display: inline-block;
+        overflow: hidden;
+
+    }
+
+    .container {
+        
+        grid-template-areas: 
+        "sidenav"
+        "item"
+        "item"
+        "item"
+        "item"
+        "item"
+        "item"
+        "footer";
+        
+             
+       
+    }
+
+}
